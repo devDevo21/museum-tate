@@ -9,15 +9,15 @@
 
         <p class="footer-links">
 
-            <a href="#">Home</a>
+            <a href="index.php">Home</a>
 
-            <a href="#">Artisti</a>
+            <a href="artista.html.php">Artisti</a>
 
-            <a href="#">Opere</a>
+            <a href="opera.html.php">Opere</a>
 
-            <a href="#">Statistiche</a>
+            <a href="statistica.html.php">Statistiche</a>
 
-            <a href="#">Visita</a>
+            <a href="visita.php">Visita</a>
         </p>
 
         <p class="footer-company-name">&copy; 2024 Museo Tate. Tutti i diritti riservati.</p>
