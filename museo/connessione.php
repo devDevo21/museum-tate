@@ -1,8 +1,8 @@
 <?php
 
     $SERVER = "localhost";          // oppure "127.0.0.1"
-    $USER = "root";			// virgil
-    $PASSWORD = "";			// studente
+    $USER = "virgil";			// virgil
+    $PASSWORD = "studente";			// studente
     $DB_NAME = "Museo";
 	$link = mysqli_connect($SERVER, $USER, $PASSWORD, $DB_NAME);
 
