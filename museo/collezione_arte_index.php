@@ -2,10 +2,9 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="cardstyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
-        <title>TATE - Visita</title>
+        <title>TATE - Ricerca Opere</title>
         <style> 
             body { max-width: 1200px; }
             /* style of navigation bar*/
@@ -51,42 +50,32 @@
                 transform: scaleX(1);
             }
         </style>
-
     </head>
+
     <body>
-    <?php include('navbar.php') ?>
+        <?php include('navbar.php') ?>
 
-    <div class="left-content" style="margin-top:100px">
-    <h2 style="margin-top:10px">Informazioni pratiche</h2>
-    <hr />
-        <p> Il Museo Tate è dedicato alla conservazione e alla promozione della cultura e dell'arte italiana. Situato nel cuore della città, 
-            il museo ospita una vasta collezione di opere d'arte, reperti archeologici e molto altro ancora.
-        </p>
-        <div>
-            <p> Aperto tutti i giorni ore 9.30-19.30
-                <br>
-                24 e 31 Dicembre ore 9.30-14.00
-                <br>
-                <strong>1° gennaio 2024 </strong>
-                dalle 11.00 alle 20.00
-                <br>
-                Ultimo ingresso un'ora prima della chiusura
-                <br>
-                <strong>Giorni di chiusura</strong>
-                <br>           
-                1 maggio e 25 dicembre
-            </p>
-            <p> 
-                <strong>Call center </strong>
-                060608 tutti i giorni dalle 9.00 alle 19.00
-                <br>
-                <strong>Email</strong>
-                <a href="mailto:info.museo@tate.com">       info.museo@tate.com </a>
-            </p>
-        </div>
-    </div>
+        <h2 style="margin-top:100px">Scopri le Opere D'arte</h2>
+        <form action="collezione_arte.php" method="POST">
+            <fieldset>
+		<label>Artista</label>
+		<input type="text" name="nome_artista" placeholder="nome artista" autofocus >
+	    </fieldset>
+            <fieldset>
+		<label>Titolo</label>
+		<input placeholder="Titolo" type="text" name="nome_artista" autofocus >
+  	    </fieldset>
+          <fieldset>
+		<label>Anno</label>
+		<input placeholder="Anno" type="text" name="anno_n" autofocus >
+	    </fieldset>
+            <fieldset>
+		<label>Tipo</label>
+		<input placeholder="Tipo" type="text" name="genere" autofocus >
+	    </fieldset>
+            <input type="submit" value="Search">
+        </form>
 
-        <?php include_once('footer.php') ?>
-
-    </body>
+        <?php include('footer.php') ?>
+</body>
 </html>

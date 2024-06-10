@@ -57,30 +57,30 @@
 
         <h2 style="margin-top:100px">Cerca gli Artisti</h2>
 
-        <form action="artista.php" method="POST">
+        <form action="artist_room.php" method="POST">
             <fieldset>
-				<label>Nome artista:</label>
-				<input type="text" name="nome_artista" autofocus >
+				<label>Nome artista</label>
+				<input placeholder="nome artista" type="text" name="nome_artista" autofocus >
 			</fieldset>
             <fieldset>
-				<label>Genere:</label>
-				<input type="text" name="genere" autofocus >
+				<label>Genere</label>
+				<input placeholder="genere" type="text" name="genere" autofocus >
 			</fieldset>
             <fieldset>
-				<label>Anno Nascita:</label>
-				<input type="text" name="anno_n" autofocus >
+				<label>Luogo Nascita</label>
+				<input placeholder="luogo nascita" type="text" name="luogo_n" autofocus >
 			</fieldset>
             <fieldset>
-				<label>Anno Decesso:</label>
-				<input type="text" name="anno_m" autofocus >
+				<label>Anno Nascita</label>
+				<input placeholder="anno nascita" type="text" name="anno_n" autofocus >
 			</fieldset>
             <fieldset>
-				<label>Luogo Nascita:</label>
-				<input type="text" name="luogo_n" autofocus >
+				<label>Anno Decesso</label>
+				<input  placeholder="anno decesso"type="text" name="anno_m" autofocus >
 			</fieldset>
             <fieldset>
-				<label>Luogo Decesso:</label>
-				<input type="text" name="luogo_m" autofocus >
+				<label>Luogo Decesso</label>
+				<input placeholder="luogo decesso" type="text" name="luogo_m" autofocus >
 			</fieldset>
             <input type="submit" value="Cerca">
         </form>
