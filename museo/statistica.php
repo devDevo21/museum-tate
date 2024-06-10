@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <title>TATE - Visualizza Statistiche</title>
         <style> 
             body { max-width: 1200px; }
@@ -51,21 +52,9 @@
         </style>
     </head>
     <body>
-        <header>
-            <h1>TATE - Risultati Statistiche</h1>
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><a class="navbar-link" href="index.html"> Home </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="artista.html">Artisti </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="opera.html"> Opere </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="statistica.html"> Statistiche </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="visita.html">Visita</a></li>
-                </ul>
-            </nav>
-        </header>
-
+    <?php include('navbar.php') ?>
        
-        <h2>Risultati del Calcolo</h2>
+        <h2 style="margin-top:100px">Risultati del Calcolo</h2>
         <?php
             include 'config.php';
 
@@ -89,13 +78,6 @@
         ?>
 
 
-        <footer>
-            <address>
-                123 Main Street, Art-City, England<br>
-                Phone: 123-456-7890<br>
-            </address>
-            <p>"L'arte non riproduce ciò che è visibile, ma rende visibile ciò che non sempre lo è." - Paul Klee</p>
-            <p>&copy; 2024 Museo Tate. Tutti i diritti riservati.</p>
-        </footer>
+        <?php include_once('footer.php') ?>
     </body>
 </html>

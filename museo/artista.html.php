@@ -2,6 +2,7 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
         <title>TATE - Ricerca Artista</title>
         <style> 
@@ -52,20 +53,9 @@
     </head>
 
     <body>
-        <header>
-            <h1>TATE - Ricerca Artista</h1>
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><a class="navbar-link" href="index.html"> Home </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="artista.html">Artisti </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="opera.html"> Opere </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="statistica.html"> Statistiche </a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="visita.html">Visita</a></li>
-                </ul>
-            </nav>
-        </header>
+    <?php include('navbar.php') ?>
 
-        <h2>Cerca gli Artisti</h2>
+        <h2 style="margin-top:100px">Cerca gli Artisti</h2>
 
         <form action="artista.php" method="POST">
             <fieldset>
@@ -95,13 +85,6 @@
             <input type="submit" value="Cerca">
         </form>
 
-        <footer>
-            <address>
-                123 Main Street, Art-City, England<br>
-                Phone: 123-456-7890<br>
-            </address>
-            <p>"L'arte non riproduce ciò che è visibile, ma rende visibile ciò che non sempre lo è." - Paul Klee</p>
-            <p>&copy; 2024 Museo Tate. Tutti i diritti riservati.</p>
-        </footer>
+        <?php include('footer.php') ?>
     </body>
 </html>
