@@ -21,7 +21,7 @@
             margin-left: 10px
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <div class="divp">
             <fieldset>
                 <label for="anno_inizio">Anno Inizio:</label>
-                <input type="number" id="anno_inizio" name="anno_inizio" required>
+                <input type="number" id="anno_inizio" name="anno_inizio" autofocus required>
             </fieldset>
             <fieldset>
                 <label for="anno_fine">Anno Fine:</label>
