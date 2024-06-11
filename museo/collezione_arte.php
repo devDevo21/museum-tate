@@ -1,60 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <title>TATE - Risultati Ricerca Opere</title>
-        <style> 
-            body { max-width: 1200px; }
-            /* style of navigation bar*/
-            .navbar {
-                background-color: #333;
-                padding: 20px 0;
-                text-align: center;
-            }
 
-            .navbar-list {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
+    <title>TATE - Risultati Ricerca Opere</title>
 
-            .navbar-item {
-                display: inline;
-                margin-right: 20px;
-            }
+    <style>
+        body {
+            max-width: 1200px;
+        }
+    </style>
+    
+</head>
 
-            .navbar-link {
-                color: #fff;
-                text-decoration: none;
-                font-size: 18px;
-                position: relative;
-            }
-
-            .navbar-link:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: rgb(160, 6, 127); /* Fluorescent color */
-                visibility: hidden;
-                transform: scaleX(0);
-                transition: all 0.3s ease-in-out;
-            }
-
-            .navbar-link:hover:before {
-                visibility: visible;
-                transform: scaleX(1);
-            }
-        </style>
-    </head>
-    <body>
+<body>
     <?php include('navbar.php') ?>
-        <h2 style="margin-top:100px">Risultati della Ricerca</h2>
-        <?php
+    <h2 style="margin-top:100px">Risultati della Ricerca</h2>
+    <?php
             include 'config.php';
 
             $titolo_opera = $conn->real_escape_string($_GET['titolo_opera']);
@@ -77,6 +39,7 @@
             $conn->close();
         ?>
 
-        <?php include_once('footer.php'); ?>
-    </body>
-    </html>
+    <?php include_once('footer.php'); ?>
+</body>
+
+</html>

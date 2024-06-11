@@ -1,90 +1,71 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
-        <title>TATE - Ricerca Artista</title>
-        <style> 
-            body { max-width: 1200px; }
-            /* style of navigation bar*/
-            .navbar {
-                background-color: #333;
-                padding: 20px 0;
-                text-align: center;
-            }
 
-            .navbar-list {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
+    <title>TATE - Ricerca Artista</title>
 
-            .navbar-item {
-                display: inline;
-                margin-right: 20px;
-            }
+    <style>
+        body {
+            max-width: 1200px;
+        }
+        .divp {
+            display: flex;
+        }
+        fieldset {
+            display: block;
+            width: 400px;
+            margin: 10px
+        }
+        .valid {
+            margin-left: 10px
+        }
+    </style>
 
-            .navbar-link {
-                color: #fff;
-                text-decoration: none;
-                font-size: 18px;
-                position: relative;
-            }
+</head>
 
-            .navbar-link:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: rgb(160, 6, 127); /* Fluorescent color */
-                visibility: hidden;
-                transform: scaleX(0);
-                transition: all 0.3s ease-in-out;
-            }
-
-            .navbar-link:hover:before {
-                visibility: visible;
-                transform: scaleX(1);
-            }
-        </style>
-    </head>
-
-    <body>
+<body>
     <?php include('navbar.php') ?>
 
-        <h2 style="margin-top:100px">Cerca gli Artisti</h2>
+    <h2 style="margin-top:100px">Cerca gli Artisti</h2>
 
-        <form action="artist_room.php" method="POST">
-            <fieldset>
-				<label>Nome artista</label>
-				<input placeholder="nome artista" type="text" name="nome_artista" autofocus >
-			</fieldset>
-            <fieldset>
-				<label>Genere</label>
-				<input placeholder="genere" type="text" name="genere" autofocus >
-			</fieldset>
-            <fieldset>
-				<label>Luogo Nascita</label>
-				<input placeholder="luogo nascita" type="text" name="luogo_n" autofocus >
-			</fieldset>
-            <fieldset>
-				<label>Anno Nascita</label>
-				<input placeholder="anno nascita" type="text" name="anno_n" autofocus >
-			</fieldset>
-            <fieldset>
-				<label>Anno Decesso</label>
-				<input  placeholder="anno decesso"type="text" name="anno_m" autofocus >
-			</fieldset>
-            <fieldset>
-				<label>Luogo Decesso</label>
-				<input placeholder="luogo decesso" type="text" name="luogo_m" autofocus >
-			</fieldset>
-            <input type="submit" value="Cerca">
-        </form>
+    <form action="artist_room.php" method="POST">
+        <div class="divp">
+            <div class="divl">
+                <fieldset>
+                    <label>Nome artista</label>
+                    <input placeholder="nome artista" type="text" name="nome_artista" autofocus>
+                </fieldset>
+                <fieldset>
+                    <label>Genere</label>
+                    <input placeholder="genere" type="text" name="genere" autofocus>
+                </fieldset>
+                <fieldset>
+                    <label>Luogo Nascita</label>
+                    <input placeholder="luogo nascita" type="text" name="luogo_n" autofocus>
+                </fieldset>
 
-        <?php include('footer.php') ?>
-    </body>
+                <input class="valid" type="submit" value="Cerca">
+            </div>
+
+            <div class="divr">
+                <fieldset>
+                    <label>Anno Nascita</label>
+                    <input placeholder="anno nascita" type="text" name="anno_n" autofocus>
+                </fieldset>
+                <fieldset>
+                    <label>Anno Decesso</label>
+                    <input placeholder="anno decesso" type="text" name="anno_m" autofocus>
+                </fieldset>
+                <fieldset>
+                    <label>Luogo Decesso</label>
+                    <input placeholder="luogo decesso" type="text" name="luogo_m" autofocus>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+
+    <?php include('footer.php') ?>
+</body>
+
 </html>

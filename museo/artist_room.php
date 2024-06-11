@@ -1,67 +1,28 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <title>TATE - Risultati Ricerca Artista</title>
-        <style> 
-            body { max-width: 1200px; }
-            /* style of navigation bar*/
-            .navbar {
-                background-color: #333;
-                padding: 20px 0;
-                text-align: center;
-            }
 
-            .navbar-list {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.css">
+    <title>TATE - Risultati Ricerca Artista</title>
 
-            .navbar-item {
-                display: inline;
-                margin-right: 20px;
-            }
+    <style>
+        body {
+            max-width: 1200px;
+        }
+    </style>
 
-            .navbar-link {
-                color: #fff;
-                text-decoration: none;
-                font-size: 18px;
-                position: relative;
-            }
+</head>
 
-            .navbar-link:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: rgb(160, 6, 127); /* Fluorescent color */
-                visibility: hidden;
-                transform: scaleX(0);
-                transition: all 0.3s ease-in-out;
-            }
+<body>
+    <?php include('navbar.php') ?>
 
-            .navbar-link:hover:before {
-                visibility: visible;
-                transform: scaleX(1);
-            }
-        </style>
-    </head>
-    <body>
-        <?php include('navbar.php') ?>
+    <div style="margin-top:100px">
+        <h2>Risultati della Ricerca</h2>
 
-        <div style="margin-top:100px">
-            <h2>Risultati della Ricerca</h2>
-
-            <?php
+        <?php
                 //connessione la database
                 include_once('connessione.php');
 
-        
                 /* La clausola 1=1 è una convenzione comune quando si costruiscono
                 query dinamiche con condizioni multiple. Questa condizione è sempre vera,
                 quindi non influisce sul risultato finale della query.
@@ -135,8 +96,9 @@
                 // Chiudere la connessione al database 
                 mysqli_close($link);
             ?>
-        </div>
-        <p><a href="artista.html"> Nuova Ricerca </a></p>
-        <?php include_once('footer.php'); ?>
-    </body>
+    </div>
+    <p><a href="artist_room_index.php"> Nuova Ricerca </a></p>
+    <?php include_once('footer.php'); ?>
+</body>
+
 </html>
